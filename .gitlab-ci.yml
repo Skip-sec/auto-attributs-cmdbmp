@@ -6,10 +6,10 @@ deploy_job:
   only:
     - master
   script:
-    - echo "Начинаем локальный деплой на srv-isd-auto.net.billing.ru в папку auto-attributs-cmdbmp..."
+    - echo "Начинаем локальный деплой на *** в папку auto-attributs-cmdbmp..."
     
     # 1. Синхронизируем файлы от имени пользователя проекта (использует NOPASSWD правило в sudoers)
-    - sudo -u isd-automation rsync -rlDvz --delete --no-owner --no-group --chmod=D755,F644 --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='venv/' --exclude='logs/' --exclude='files/' --exclude='.env' --exclude='__pycache__/' ./ /opt/auto-attributs-cmdbmp/
+    - sudo -u *** rsync -rlDvz --delete --no-owner --no-group --chmod=D755,F644 --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='venv/' --exclude='logs/' --exclude='files/' --exclude='.env' --exclude='__pycache__/' ./ /opt/auto-attributs-cmdbmp/
 
     # 2. Переходим в папку
     - cd /opt/auto-attributs-cmdbmp/
