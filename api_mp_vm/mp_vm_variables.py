@@ -1,2 +1,2 @@
-mpvm_base_url = "https://srv-siem-core.net.billing.ru"
+mpvm_base_url = "https://***"
 MPVM_HTTPS_VERIFY = False 
